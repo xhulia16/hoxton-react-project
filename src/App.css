@@ -34,7 +34,7 @@
 .star-figure {
   margin-top: 10px;
   width: 2px;
-  height: 3px;
+  height: 5px;
   background-color: rgb(94, 91, 245);
   border-radius: 50%;
   animation-name: glow;
@@ -143,6 +143,7 @@ article {
   justify-items: center;
   text-align: center;
   box-shadow: 0 0 5px 1px rgb(2, 2, 27);
+  background-color: aliceblue;
 }
 
 article img {
@@ -153,8 +154,7 @@ article img {
 
 article h3 {
   width: 500px;
-  color: azure;
-
+  color: rgb(7, 3, 29);
   font-size: medium;
   padding-bottom: 10px;
 }
