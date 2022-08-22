@@ -1,42 +1,91 @@
-.App {
+*{
+  margin:0; 
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.App{
+  height: 100vh;
+  display: grid;
+  grid-auto-flow: row;
+  color: white; 
+  background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
+background-size: cover;
+background-color:blue;
+background-blend-mode: darken;
+}
+
+.title{
+  font-size: 30px;
+}
+
+.header{
+background-color: rgba(8, 8, 15, 0.637);
+padding-left: 60px;
+height: 70px; 
+width: 100%;
+position: fixed;
+display: grid;
+grid-auto-flow: column;
+align-items: center;
+
+}
+
+.header-right{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: right;
+  gap: 60px;
+  padding-right: 100px;
+}
+
+.footer{
+height: 60px; 
+width: 100%;
+background-color: rgba(8, 8, 15, 0.637);
+align-self: flex-end;
+position: fixed;
+}
+
+input{
+  height: 30px; 
+  width:fit-content;
   text-align: center;
+  background-color: transparent;
+  border:none;
+  border-bottom: 1px solid white;
+  color:white;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::placeholder{
+  color:rgb(255, 255, 255); 
+  opacity: 1; 
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  height: 30px; 
+  width: fit-content;
+  padding:  5px;
+  background-color: transparent;
+  color:white; 
+  border: none;
+  font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+select{
+  height: 30px;
+  width: 20px;
   color: white;
+  background: transparent;
+  border: none;
+
 }
 
-.App-link {
-  color: #61dafb;
+option{
+background-color: rgb(2, 2, 39);
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
-}
