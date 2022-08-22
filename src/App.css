@@ -35,7 +35,7 @@
   margin-top: 10px;
   width: 2px;
   height: 3px;
-  background-color: rgb(108, 45, 255);
+  background-color: rgb(94, 91, 245);
   border-radius: 50%;
   animation-name: glow;
   animation-iteration-count: infinite;
@@ -45,10 +45,10 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 -10px 5px rgb(200, 186, 253);
+    box-shadow: 0 0 -5px 5px rgb(75, 30, 238);
   }
   to {
-    box-shadow: 0 0 14px 5px rgb(43, 0, 255);
+    box-shadow: 0 0 18px 10px rgb(49, 9, 250);
   }
 }
 
