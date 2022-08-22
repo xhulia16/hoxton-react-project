@@ -118,6 +118,16 @@ main {
   gap: 20px;
 }
 
+.article-container{
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  height:440px;
+}
+
 article {
   display: grid;
   grid-auto-flow: row;

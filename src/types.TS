@@ -1,6 +1,6 @@
-type Article = {
-    id: number,
-    title: string,
-    image: string,
+export type Article = {
+    id: number
+    title: string
+    image: string
     description: string
 }
