@@ -3,7 +3,6 @@ export function Header(){
         <header className="header">
           <div className="header-left">
           <h2 className="title">NasaH</h2>
-          <figure className="star-figure"></figure>
           </div>
         <div className="header-right">
           <input placeholder="Search here"></input>
