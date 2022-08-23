@@ -1,16 +1,33 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
-import { Article } from "../types";
+import { useNavigate, useParams } from "react-router-dom";
+import { Article, Bookmark } from "../types";
 
 export function NewsDetails(){
     const params = useParams();
-    const [singleArticle, setSingleArticle]=useState<Article | null>()
+    const navigate=useNavigate();
+    const [singleArticle, setSingleArticle]=useState<Article | null>();
+
 
     useEffect(()=>{
         fetch(`http://localhost:4000/articles/${params.itemId}`)
         .then(resp=>resp.json())
         .then(articleFromServer=> setSingleArticle(articleFromServer))
     }, [])
+
+    function addBookmark(){
+        fetch("http://localhost:4000/bookmarks",{
+            method: "POST", 
+            headers: {
+                "Content-type": "application/json"
+            }, 
+            body: JSON.stringify({
+                articleId: singleArticle?.id
+            })
+            
+        })
+        .then(data=> navigate('/bookmarks'))
+     }
+    
  
 
     return(
@@ -19,7 +36,8 @@ export function NewsDetails(){
    <div className="details">
     <h2>{singleArticle?.title}</h2>
     <p>{singleArticle?.description}</p>
-    <button>Bookmark</button>
+    <button onClick={addBookmark}
+    >Bookmark</button>
     <input placeholder="Leave a comment..."></input>
     <ul>
         <li>List of comments here</li>

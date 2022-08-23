@@ -18,16 +18,11 @@
       "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/70hc958_banner.jpg",
       "description": "Learning to point and hold an orbiting telescope on a star long enough for the detectors to capture its light proved much more difficult than expected. Satellites designed to study the Sun at the time had a built-in advantage – they targeted the solar system’s brightest object. Copernicus flew with a new inertial reference unit (IRU) developed by the Massachusetts Institute of Technology. Gyroscopes in the IRU sped up the process of acquiring targets, while other systems kept the satellite locked on. In a study of the mission’s first 500 days, one engineer summed it up by noting that the IRU had made flying Copernicus “a boring operation.”In NASA’s early days, astronomers emphasized the need for ultraviolet (UV) studies, which could not be made from the ground, and this became the primary focus of the OAO program. Of four satellites launched, one failed after three days in space, and another never reached orbit at all. OAO 2, launched in 1968 and named Stargazer, provided years of observations, including low-resolution stellar spectra, which spread out wavelengths much like a rainbow to reveal the UV fingerprints of specific molecules and atoms. Copernicus went deeper still, capturing spectra with up to 200 times better detail in some wavelengths."
     }
-  ], 
-
+  ],
   "bookmarks": [
     {
       "id": 1,
-     "articleId": 1
-  },
-  {
-    "id": 2,
-   "articleId": 2
-}
+      "articleId": 1
+    }
   ]
 }

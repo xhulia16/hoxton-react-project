@@ -21,7 +21,7 @@
 }
 
 .header {
-  background-color: rgba(8, 8, 15, 0.637);
+  background-color: rgba(8, 8, 15, 0.288);
   padding-left: 60px;
   height: 70px;
   width: 100%;
@@ -29,6 +29,7 @@
   display: grid;
   grid-auto-flow: column;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.068);
 }
 
 .star-figure {
@@ -70,9 +71,10 @@
 .footer {
   height: 60px;
   width: 100%;
-  background-color: rgba(8, 8, 15, 0.637);
+  background-color: rgba(8, 8, 15, 0.432);
   align-self: flex-end;
   position: fixed;
+  border-top: 1px solid rgba(255, 255, 255, 0.068);
 }
 
 input {
@@ -128,7 +130,7 @@ main {
   grid-auto-flow: column;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 95px;
 }
 
 .article-container {
@@ -137,6 +139,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 5px;
 }
 
 article {
@@ -173,12 +176,14 @@ a{
   grid-auto-flow: column;
   gap: 30px;
   gap: 100px;
+
 }
 
 .details-container img{
   width: 480px;
   height: 500px;
   object-fit: cover;
+  
 }
 
 .details{
@@ -241,7 +246,9 @@ padding: 15px;
   border-bottom: 1px solid white;
 }
 
-.bookmark-detail p, h2{
+.bookmark-detail p,
+.bookmark-detail h2
+{
   width: 700px; 
   height: 30px; 
   overflow: hidden;
