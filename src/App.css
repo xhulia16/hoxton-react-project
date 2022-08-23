@@ -158,3 +158,34 @@ article h3 {
   font-size: medium;
   padding-bottom: 10px;
 }
+
+.details-container{
+  padding: 40px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+  gap: 50px;
+}
+
+.details-container img{
+  width: 480px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.details{
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.details p{
+  width: 600px; 
+  font-size: 15px;
+  font-weight: 100;
+  word-spacing: 3px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.details input{
+
+}

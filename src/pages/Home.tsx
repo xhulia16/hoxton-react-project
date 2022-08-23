@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Article } from "../types";
 
 
@@ -40,10 +41,12 @@ export function Home(){
           <span onClick={next} className="material-symbols-outlined">
             keyboard_double_arrow_left
           </span>
+          <Link to={`/home/${article[0 + index].id}`}>
           <article>
             <img src={article[0 + index].image}></img>
             <h3>{article[0 + index].title}</h3>
           </article>
+          </Link>
           <span onClick={previous} className="material-symbols-outlined">
             keyboard_double_arrow_right
           </span>
