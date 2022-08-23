@@ -215,7 +215,7 @@ padding: 15px;
   display: grid;
   grid-auto-flow: row;
   align-self: baseline;
-margin-top: 100px;
+  margin-top: 100px;
   gap: 40px;
 
 }
@@ -228,6 +228,8 @@ margin-top: 100px;
 
 .bookmarks-container ul{
   list-style: none;
+  display: grid;
+  gap: 10px;
 }
 
 .bookmark-detail{
@@ -239,7 +241,7 @@ margin-top: 100px;
   border-bottom: 1px solid white;
 }
 
-.bookmark-detail p{
+.bookmark-detail p, h2{
   width: 700px; 
   height: 30px; 
   overflow: hidden;
