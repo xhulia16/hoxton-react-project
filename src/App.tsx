@@ -6,6 +6,7 @@ import { Bookmarks } from "./pages/Bookmarks";
 import { Home } from "./pages/Home";
 import { NewsDetails } from "./pages/NewsDetails";
 import { PageNotFound } from "./pages/NotFound";
+import { SearchResult } from "./pages/SearchResult";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
    <Route index element={< Navigate to='/home' />} />
    <Route path= '/home' element={<Home/>}/>
    <Route path= '/home/:itemId' element={<NewsDetails/>}/>
-    <Route path= '/bookmarks' element={<Bookmarks/>}/>
+   <Route path= '/bookmarks' element={<Bookmarks/>}/>
     <Route path= "*" element={<PageNotFound/>}/>
    </Routes>
    </main>
