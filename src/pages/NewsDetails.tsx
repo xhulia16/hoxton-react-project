@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Article, Bookmark } from "../types";
+import { Article} from "../types";
 
 export function NewsDetails() {
   const params = useParams();
@@ -9,7 +9,7 @@ export function NewsDetails() {
   const [bookmarks, setBookmarks] = useState<Number[]>([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/articles/${params.itemId}`)
+    fetch(`http://localhost:4000/articles/${params.itemId}?_embed=comments`)
       .then((resp) => resp.json())
       .then((articleFromServer) => setSingleArticle(articleFromServer));
   }, []);
@@ -23,8 +23,6 @@ export function NewsDetails() {
   }, []);
 
   function addBookmark() {
-    // for(let bookmark of bookmarks) {
-    //     if(singleArticle?.id!== bookmark.articleId)
     if (
       bookmarks.every((id) => {
         return id !== singleArticle?.id;
@@ -47,6 +45,20 @@ export function NewsDetails() {
     }
   }
 
+  function addComment(value){
+    fetch("http://localhost:4000/comments",{
+      method: "POST", 
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({
+        content: value,
+        articleId: singleArticle?.id
+      })
+        
+    })
+  }
+
   return (
     <div className="details-container">
       <img src={singleArticle?.image}></img>
@@ -64,9 +76,19 @@ export function NewsDetails() {
         >
           Bookmark
         </button>
-        <input placeholder="Leave a comment..."></input>
+        <form onSubmit={(event)=>{
+          event.preventDefault()
+         addComment(event.target.input.value)
+         event.target.reset()
+        }}>
+        <input name="input" placeholder="Leave a comment..."></input>
+        <button>Submit</button>
+        </form>
         <ul>
-          <li>List of comments here</li>
+          {singleArticle?.comments.map(item=>(
+            <li>{item.content}</li>
+          ))}
+          
         </ul>
       </div>
     </div>

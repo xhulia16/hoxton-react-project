@@ -210,9 +210,16 @@ border: 1px solid white;
   width: max-content;
 }
 
+.details form{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: left;
+  gap: 10px;
+}
+
 .details ul{
 list-style: none;
-border: 2px solid white;
+border: 1px solid white;
 padding: 15px;
 }
 
