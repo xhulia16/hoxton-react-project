@@ -219,6 +219,8 @@ border: 1px solid white;
 
 .details ul{
 list-style: none;
+display: grid;
+
 border: 1px solid white;
 padding: 15px;
 }

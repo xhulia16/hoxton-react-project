@@ -45,7 +45,7 @@ export function NewsDetails() {
     }
   }
 
-  function addComment(value){
+  function addComment(value: string){
     fetch("http://localhost:4000/comments",{
       method: "POST", 
       headers: {
@@ -57,6 +57,17 @@ export function NewsDetails() {
       })
         
     })
+  }
+window.singleArticle=singleArticle
+
+  function showNewComment(value:string){
+    let copyArticle=structuredClone(singleArticle)
+    let comment={
+      articleId: singleArticle.id,
+      content: value
+    }
+    copyArticle.comments.push(comment)
+    setSingleArticle(copyArticle)
   }
 
   return (
@@ -78,7 +89,9 @@ export function NewsDetails() {
         </button>
         <form onSubmit={(event)=>{
           event.preventDefault()
-         addComment(event.target.input.value)
+          let comment=event.target.input.value
+         addComment(comment)
+         showNewComment(comment)
          event.target.reset()
         }}>
         <input name="input" placeholder="Leave a comment..."></input>
@@ -86,7 +99,7 @@ export function NewsDetails() {
         </form>
         <ul>
           {singleArticle?.comments.map(item=>(
-            <li>{item.content}</li>
+            <li key={item.id}>➺ {item.content}</li>
           ))}
           
         </ul>
