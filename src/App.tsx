@@ -6,7 +6,7 @@ import { Bookmarks } from "./pages/Bookmarks";
 import { Home } from "./pages/Home";
 import { NewsDetails } from "./pages/NewsDetails";
 import { PageNotFound } from "./pages/NotFound";
-import { SearchResult } from "./pages/SearchResult";
+
 
 function App() {
   return (

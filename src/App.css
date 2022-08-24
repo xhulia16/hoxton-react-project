@@ -259,7 +259,9 @@ gap: 10px;
 }
 
 .bookmark-detail p,
-.bookmark-detail h2
+.bookmark-detail h2,
+.popup-item p,
+.popup-item h2
 {
   width: 700px; 
   height: 30px; 
@@ -270,4 +272,42 @@ gap: 10px;
 
 .bookmark-detail button{
   border: 1px solid white
+}
+
+.popup{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup-item{
+  width: 770px;
+  height: 300px;
+  overflow-y: scroll;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 10px;
+  align-items: top;
+  background-color: rgb(5, 1, 14);
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -340px; 
+  left: 90%;
+  margin-left: -80px;
+}
+
+.popup-item li{
+  display: grid;
+  grid-auto-flow: column;
+  font-size: small;
+}
+
+.popup-item img{
+  width:30px;
+  height:30px;
+  object-fit: cover;
 }
