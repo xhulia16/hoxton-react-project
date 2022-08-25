@@ -66,7 +66,9 @@ export function Header({logOut}) {
           onChange={(event) => {
             console.log(event.target.value);
             if (event.target.value === "Bookmarks") {
+              if(localStorage.id)
               navigate("/bookmarks");
+              else navigate('/signIn')
             }
           }}
         >

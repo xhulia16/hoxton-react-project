@@ -13,7 +13,7 @@ export function SignIn({logIn}){
                    logIn(user)
                 }
                 else{
-                    console.log("User did not sign in ")
+                    alert("Your email or password is incorrect!")
                 }
             })
         }}

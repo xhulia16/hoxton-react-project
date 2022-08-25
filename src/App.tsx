@@ -7,33 +7,34 @@ import { Bookmarks } from "./pages/Bookmarks";
 import { Home } from "./pages/Home";
 import { NewsDetails } from "./pages/NewsDetails";
 import { PageNotFound } from "./pages/NotFound";
+import { Profile } from "./pages/Profile";
 import { SignIn } from "./pages/SignIn";
 import { User } from "./types";
 
 function App() {
-  const [user, setUser]=useState<User| null>(null);
-  const navigate=useNavigate()
- 
-  function logIn(user:User){
-    localStorage.id=user.id
-    setUser(user)
-    navigate("/home")
+  const [user, setUser] = useState<User | null>(null);
+  const navigate = useNavigate();
+
+  function logIn(user: User) {
+    localStorage.id = user.id;
+    setUser(user);
+    navigate("/home");
   }
 
-  function logOut(user:User){
-    localStorage.removeItem('id')
-    setUser(null)
+  function logOut(user: User) {
+    localStorage.removeItem("id");
+    setUser(null);
   }
- 
-  useEffect(()=>{
-    const userId=localStorage.id
-    if(userId){
+
+  useEffect(() => {
+    const userId = localStorage.id;
+    if (userId) {
       fetch(`http://localhost:4000/users/${userId}`)
-      .then(resp=>resp.json())
-      .then(user=>setUser(user))
-      .then(data=> navigate("/home"))
-    }}, [localStorage.id])
-
+        .then((resp) => resp.json())
+        .then((user) => setUser(user))
+        .then((data) => navigate("/home"));
+    }
+  }, [localStorage.id]);
 
   return (
     <div className="App">
@@ -43,8 +44,9 @@ function App() {
           <Route index element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/home/:itemId" element={<NewsDetails />} />
-          <Route path="/bookmarks" element={<Bookmarks user={user}/>} />
+          <Route path="/bookmarks" element={<Bookmarks user={user} />} />
           <Route path="/signIn" element={<SignIn logIn={logIn} />} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>

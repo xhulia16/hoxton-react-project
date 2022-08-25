@@ -39,14 +39,9 @@
   ],
   "bookmarks": [
     {
-      "articleId": 1,
-      "id": 1,
-      "userId": "xhulia@email.com"
-    },
-    {
-      "articleId": 3,
-      "id": 2,
-      "userId": "xhulia@email.com"
+      "articleId": 6,
+      "userId": "xhulia@email.com",
+      "id": 2
     }
   ],
   "comments": [

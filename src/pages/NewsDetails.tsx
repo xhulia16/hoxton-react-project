@@ -36,6 +36,7 @@ export function NewsDetails() {
           },
           body: JSON.stringify({
             articleId: singleArticle?.id,
+            userId: localStorage.id
           }),
         }).then((data) => navigate("/bookmarks"));
       }
