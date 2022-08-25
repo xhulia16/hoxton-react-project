@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Bookmark } from "../types";
+import { Bookmark, User } from "../types";
 
-export function Bookmarks() {
+type Props = {
+  user: User | null;
+};
+
+export function Bookmarks({ user }: Props) {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
 
-  function deleteBookmark(item: Number){
-fetch(`http://localhost:4000/bookmarks/${item}`,{
-  method: "DELETE"})
-  .then(resp=>resp.json())
+  function deleteBookmark(item: Number) {
+    fetch(`http://localhost:4000/bookmarks/${item}`, {
+      method: "DELETE",
+    }).then((resp) => resp.json());
   }
 
   useEffect(() => {
-    fetch(`http://localhost:4000/bookmarks/?_expand=article`)
+    fetch(`http://localhost:4000/users/${user.id}/bookmarks/?_expand=article`)
       .then((resp) => resp.json())
       .then((bookmarks) => setBookmarks(bookmarks));
   }, []);
@@ -22,22 +26,26 @@ fetch(`http://localhost:4000/bookmarks/${item}`,{
       <ul>
         {bookmarks.map((item) => (
           <li className="bookmark-detail">
-            
             <img src={item.article.image}></img>
             <div>
-            <Link to={`/home/${item.articleId}`}>
-            <h2>{item.article.title}</h2>
-            <p>{item.article.description}</p>
-            </Link>
+              <Link to={`/home/${item.articleId}`}>
+                <h2>{item.article.title}</h2>
+                <p>{item.article.description}</p>
+              </Link>
             </div>
-            
-            <button onClick={()=>{
-              deleteBookmark(item.id)
-            let newBookmarks= bookmarks.filter(bookmark=> bookmark.id !==item.id)
-            setBookmarks(newBookmarks)
-            }}
-            >Remove</button>
-            </li>
+
+            <button
+              onClick={() => {
+                deleteBookmark(item.id);
+                let newBookmarks = bookmarks.filter(
+                  (bookmark) => bookmark.id !== item.id
+                );
+                setBookmarks(newBookmarks);
+              }}
+            >
+              Remove
+            </button>
+          </li>
         ))}
       </ul>
     </div>

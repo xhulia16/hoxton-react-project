@@ -311,3 +311,13 @@ gap: 10px;
   height:30px;
   object-fit: cover;
 }
+
+.logIn-form{
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+}
+
+.logIn-form button{
+  border: 1px solid white;
+}

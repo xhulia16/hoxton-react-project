@@ -6,14 +6,22 @@ export type Article = {
     comments: Comment[]
 }
 
-export type Bookmark={
+export type Bookmark = {
     id: number
     articleId: number
     article: Article
+    userId: number
 }
 
-export type Comment={
- id: number
- content: string
- articleId: number
+export type Comment = {
+    id: number
+    content: string
+    articleId: number
+}
+
+export type User = {
+    id: string
+    name: string
+    email: string
+    password: string
 }
