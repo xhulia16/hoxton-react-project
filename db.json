@@ -42,6 +42,10 @@
       "articleId": 6,
       "userId": "xhulia@email.com",
       "id": 2
+    },
+    {
+      "articleId": 2,
+      "id": 3
     }
   ],
   "comments": [

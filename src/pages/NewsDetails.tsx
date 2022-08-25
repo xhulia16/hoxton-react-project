@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Article} from "../types";
 
@@ -79,13 +79,17 @@ window.singleArticle=singleArticle
         <p>{singleArticle?.description}</p>
         <button
           onClick={() => {
-            let newBookmark = {
-              articleId: singleArticle?.id,
-            };
-            setBookmarks([...bookmarks, newBookmark]);
-            addBookmark();
+            if(localStorage.id){
+              let newBookmark = {
+                articleId: singleArticle?.id,
+              };
+              setBookmarks([...bookmarks, newBookmark]);
+              addBookmark();
+            }
+            else navigate('/signIn')
           }}
-        >
+          >
+          
           Bookmark
         </button>
         <form onSubmit={(event)=>{

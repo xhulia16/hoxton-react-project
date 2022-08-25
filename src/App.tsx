@@ -32,7 +32,6 @@ function App() {
       fetch(`http://localhost:4000/users/${userId}`)
         .then((resp) => resp.json())
         .then((user) => setUser(user))
-        .then((data) => navigate("/home"));
     }
   }, [localStorage.id]);
 
@@ -46,7 +45,7 @@ function App() {
           <Route path="/home/:itemId" element={<NewsDetails />} />
           <Route path="/bookmarks" element={<Bookmarks user={user} />} />
           <Route path="/signIn" element={<SignIn logIn={logIn} />} />
-          <Route path="/profile" element={<Profile/>} />
+          <Route path="/profile" element={<Profile user={user}/>} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
