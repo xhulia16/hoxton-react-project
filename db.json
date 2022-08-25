@@ -17,20 +17,36 @@
       "title": "50 Years Ago, NASA’s Copernicus Set the Bar for Space Astronomy",
       "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/70hc958_banner.jpg",
       "description": "Learning to point and hold an orbiting telescope on a star long enough for the detectors to capture its light proved much more difficult than expected. Satellites designed to study the Sun at the time had a built-in advantage – they targeted the solar system’s brightest object. Copernicus flew with a new inertial reference unit (IRU) developed by the Massachusetts Institute of Technology. Gyroscopes in the IRU sped up the process of acquiring targets, while other systems kept the satellite locked on. In a study of the mission’s first 500 days, one engineer summed it up by noting that the IRU had made flying Copernicus “a boring operation.”In NASA’s early days, astronomers emphasized the need for ultraviolet (UV) studies, which could not be made from the ground, and this became the primary focus of the OAO program. Of four satellites launched, one failed after three days in space, and another never reached orbit at all. OAO 2, launched in 1968 and named Stargazer, provided years of observations, including low-resolution stellar spectra, which spread out wavelengths much like a rainbow to reveal the UV fingerprints of specific molecules and atoms. Copernicus went deeper still, capturing spectra with up to 200 times better detail in some wavelengths."
+    },
+    {
+      "id": 4,
+      "title": "Webb’s Jupiter Images Showcase Auroras, Hazes",
+      "image": "https://blogs.nasa.gov/webb/wp-content/uploads/sites/326/2022/08/JWST_2022-07-27_Jupiter.png",
+      "description": "With giant storms, powerful winds, auroras, and extreme temperature and pressure conditions, Jupiter has a lot going on. Now, NASA’s James Webb Space Telescope has captured new images of the planet. Webb’s Jupiter observations will give scientists even more clues to Jupiter’s inner life.  “We hadn’t really expected it to be this good, to be honest,” said planetary astronomer Imke de Pater, professor emerita of the University of California, Berkeley. De Pater led the observations of Jupiter with Thierry Fouchet, a professor at the Paris Observatory, as part of an international collaboration for Webb’s Early Release Science program. Webb itself is an international mission led by NASA with its partners ESA (European Space Agency) and CSA (Canadian Space Agency). “It’s really remarkable that we can see details on Jupiter together with its rings, tiny satellites, and even galaxies in one image,” she said. The two images come from the observatory’s Near-Infrared Camera (NIRCam), which has three specialized infrared filters that showcase details of the planet. Since infrared light is invisible to the human eye, the light has been mapped onto the visible spectrum. Generally, the longest wavelengths appear redder and the shortest wavelengths are shown as more blue. Scientists collaborated with citizen scientist Judy Schmidt to translate the Webb data into images. "
+    },
+    {
+      "id": 5,
+      "title": "NASA Scientists Help Probe Dark Energy by Testing Gravity",
+      "image": "https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg?itok=aM1XPk-L",
+      "description": "The universe is expanding at an accelerating rate, and scientists don’t know why. This phenomenon seems to contradict everything researchers understand about gravity’s effect on the cosmos: It’s as if you threw an apple in the air and it continued upward, faster and faster. The cause of the acceleration, dubbed dark energy, remains a mystery. A new study from the international Dark Energy Survey, using the Victor M. Blanco 4-meter Telescope in Chile, marks the latest effort to determine whether this is all simply a misunderstanding: that expectations for how gravity works at the scale of the entire universe are flawed or incomplete. This potential misunderstanding might help scientists explain dark energy. But the study – one of the most precise tests yet of Albert Einstein’s theory of gravity at cosmic scales – finds that the current understanding still appears to be correct. The results, authored by a group of scientists that includes some from NASA’s Jet Propulsion Laboratory, were presented Wednesday, Aug. 23, at the International Conference on Particle Physics and Cosmology (COSMO'22) in Rio de Janeiro. The work helps set the stage for two upcoming space telescopes that will probe our understanding of gravity with even higher precision than the new study and perhaps finally solve the mystery."
+    },
+    {
+      "id": 6,
+      "title": "Three Companies to Help NASA Advance Solar Array Technology for Moon",
+      "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/surface_power_2_0.png",
+      "description": "The agency will award a total of $19.4 million to three companies to build prototypes and perform environmental testing, with the goal of deploying one of the systems near the Moon’s South Pole near the end of this decade. The designs must remain stable on sloped terrain and be resistant to abrasive lunar dust, all while minimizing both mass and stowed volume to aid in the system’s delivery to the lunar surface. The awards include: Astrobotic Technology of Pittsburgh, Pennsylvania: $6.2 million, Honeybee Robotics of Brooklyn, New York: $7 million, Lockheed Martin of Littleton, Colorado: $6.2 million. Existing space-rated solar array structures are designed for use in microgravity or for horizontal surface deployment. The vertical orientation and height of these new designs will help prevent loss of power at the lunar poles where the Sun does not rise very far above the horizon. When the Sun is low on the horizon, the Moon's terrain can block some of its light, keeping it from reaching solar arrays that are low to the ground. By placing the solar arrays on tall masts, these designs allow for uninterrupted light and therefore produce more power.“We are very excited to be able to select these three teams as they all bring very different technological solutions as well as unique visions for how commercial space can support a sustained presence on the Moon,” said Chuck Taylor, Vertical Solar Array Technology (VSAT) project manager at NASA’s Langley Research Center in Hampton, Virginia."
     }
   ],
   "bookmarks": [
     {
       "articleId": 1,
-      "id": 1
+      "id": 1,
+      "userId": 1
     },
     {
       "articleId": 3,
-      "id": 2
-    },
-    {
-      "articleId": 2,
-      "id": 3
+      "id": 2,
+      "userId": 1
     }
   ],
   "comments": [
@@ -68,6 +84,19 @@
       "content": "Another comment",
       "articleId": 3,
       "id": 7
+    },
+    {
+      "content": "If your passion is to communicate and engage the world via social media, then this is the event for you! ",
+      "articleId": 2,
+      "id": 8
+    }
+  ],
+  "users":[
+    {
+      "id":1,
+      "name":"Xhulia",
+      "email": "xhulia@email.com",
+      "password": "xhulia123"
     }
   ]
 }

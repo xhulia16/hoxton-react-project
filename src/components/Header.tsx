@@ -7,6 +7,7 @@ export function Header() {
   const [searchedArticle, setSearchedArticle] = useState<Article[] | null>(
     null
   );
+
   let navigate = useNavigate();
 
   function searchForArticle() {
@@ -29,16 +30,16 @@ export function Header() {
       </div>
       {query !== "" ? (
         <div className="popup">
-        <ul className="popup-item">
-          {searchedArticle?.map((item) => (
-            <li >
+          <ul className="popup-item">
+            {searchedArticle?.map((item) => (
+              <li>
                 <Link to={`/home/${item.id}`}>
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
                 </Link>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
         </div>
       ) : (
         ""
@@ -51,11 +52,14 @@ export function Header() {
           }}
           placeholder="Search here"
         ></input>
-        <button>Login</button>
+        <button onClick={()=>{
+          navigate('/signIn')
+        }}
+        >Login</button>
         <select
           onChange={(event) => {
-            let selected = event.target.value;
-            if (selected === "Bookmarks") {
+            console.log(event.target.value);
+            if (event.target.value === "Bookmarks") {
               navigate("/bookmarks");
             }
           }}
