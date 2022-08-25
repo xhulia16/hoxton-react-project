@@ -17,6 +17,7 @@ function App() {
   function logIn(user:User){
     localStorage.id=user.id
     setUser(user)
+    navigate("/home")
   }
 
   function logOut(user:User){
@@ -36,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header></Header>
+      <Header logOut={logOut}></Header>
       <main>
         <Routes>
           <Route index element={<Navigate to="/home" />} />

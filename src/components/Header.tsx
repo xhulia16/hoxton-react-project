@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Article } from "../types";
 
-export function Header() {
+export function Header({logOut}) {
   const [query, setQuery] = useState("");
   const [searchedArticle, setSearchedArticle] = useState<Article[] | null>(
     null
@@ -52,10 +52,16 @@ export function Header() {
           }}
           placeholder="Search here"
         ></input>
+        {localStorage.id? 
+        <button onClick={logOut}
+        >Logout</button>: 
         <button onClick={()=>{
           navigate('/signIn')
         }}
         >Login</button>
+        
+        }
+        
         <select
           onChange={(event) => {
             console.log(event.target.value);
