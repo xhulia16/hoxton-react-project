@@ -70,6 +70,12 @@ export function Header({logOut}) {
               navigate("/bookmarks");
               else navigate('/signIn')
             }
+            if(event.target.value ==="Profile"){
+              if(localStorage.id){
+                navigate("/profile")
+              }
+              else navigate("/signIn")
+            } 
           }}
         >
           <option></option>
