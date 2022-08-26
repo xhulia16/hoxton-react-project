@@ -45,7 +45,8 @@
     },
     {
       "articleId": 2,
-      "id": 3
+      "userId": "xhulia@email.com",
+      "id": 5
     }
   ],
   "comments": [
@@ -88,6 +89,31 @@
       "content": "If your passion is to communicate and engage the world via social media, then this is the event for you! ",
       "articleId": 2,
       "id": 8
+    },
+    {
+      "content": "Leave a comment",
+      "articleId": 2,
+      "id": 9
+    },
+    {
+      "content": "wow",
+      "articleId": 1,
+      "id": 10
+    },
+    {
+      "content": "woow",
+      "articleId": 1,
+      "id": 11
+    },
+    {
+      "content": "comment 1",
+      "articleId": 6,
+      "id": 12
+    },
+    {
+      "content": "comment 2",
+      "articleId": 6,
+      "id": 13
     }
   ],
   "users": [

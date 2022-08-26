@@ -103,7 +103,7 @@ window.singleArticle=singleArticle
         <button>Submit</button>
         </form>
         <ul>
-          {singleArticle?.comments.map(item=>(
+          {singleArticle?.comments.reverse().map(item=>(
             <li key={item.id}>➺ {item.content}</li>
           ))}
           
